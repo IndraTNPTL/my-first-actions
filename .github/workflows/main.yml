@@ -21,3 +21,5 @@ jobs:
         run: echo "La valeur du secret est :" "abc" ${{secrets.MY_SECRET}}
       - name: Print My Variable
         run: echo "${{env.MY_VARIABLE}}"
+       - name: Display secret
+        run: echo "The secret value is ${{ secrets.MY_SECRET }}"
