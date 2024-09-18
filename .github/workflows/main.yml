@@ -14,8 +14,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Say Hello
         run: echo "Hello, GitHub Actions!"
+      - name: Afficher la valeur du secret
+        run: echo "La valeur du secret est :" "abc" ${{secrets.MY_SECRET}}
       - name: Print My Variable
-        run: echo $MY_VARIABLE
+        run: echo "${{env.MY_VARIABLE}}"
