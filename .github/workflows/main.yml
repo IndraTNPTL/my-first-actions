@@ -18,6 +18,10 @@ jobs:
       - name: Say Hello
         run: echo "Hello, GitHub Actions!"
       - name: Afficher la valeur du secret
-        run: echo "La valeur du secret est :"  ${{secrets.MY_SECRET}}
+        run: echo "La valeur du secret est :" " ${{secrets.MY_SECRET}}
       - name: Print My Variable
         run: echo "${{env.MY_VARIABLE}}"
+      - name: Create hello.txt
+        run: echo "Hello world" > hello.txt
+      - name: Display hello.txt content
+        run: cat hello.txt
